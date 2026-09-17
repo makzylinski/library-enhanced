@@ -11,6 +11,15 @@ public class Author {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
