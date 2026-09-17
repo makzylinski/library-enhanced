@@ -9,16 +9,16 @@ public class Game {
     Scanner sc = new Scanner(System.in);
     int gameOption;
 
-    Option o1 = new Option(0, "Show all books");
-    Option o2 = new Option(1, "Add new book");
-    Option o3 = new Option(2, "Borrow a book");
-    Option o4 = new Option(3, "Return a book");
-    Option o5 = new Option(4, "Exit");
-
     List<Option> options = new ArrayList<>();
 
     public Game() {
-        Collections.addAll(options, o1, o2, o3, o4, o5);
+        Collections.addAll(
+                options,
+                new Option(0, "Show all books"),
+                new Option(1, "Add new book"),
+                new Option(2, "Borrow a book"),
+                new Option(3, "Return a book"),
+                new Option(4, "Exit"));
     }
 
     public void startGame() {
