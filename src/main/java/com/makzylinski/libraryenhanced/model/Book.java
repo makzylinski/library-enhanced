@@ -15,6 +15,17 @@ public class Book {
         this.isAvailable = isAvailable;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author=" + author +
+                ", pages=" + pages +
+                ", isAvailable=" + isAvailable +
+                '}';
+    }
+
     public int getId() {
         return id;
     }

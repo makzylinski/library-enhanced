@@ -10,6 +10,7 @@ public class Game {
     int gameOption;
 
     List<Option> options = new ArrayList<>();
+    List<Book> books = new ArrayList<>();
 
     public Game() {
         Collections.addAll(
@@ -19,7 +20,20 @@ public class Game {
                 new Option(2, "Borrow a book"),
                 new Option(3, "Return a book"),
                 new Option(4, "Exit"));
-    }
+
+        Collections.addAll(
+                books,
+                new Book(1, "1984", new Author(1, "George", "Orwell"), 328, true),
+                new Book(2, "Brave New World", new Author(2, "Aldous", "Huxley"), 311, true),
+                new Book(3, "Fahrenheit 451", new Author(3, "Ray", "Bradbury"), 194, false),
+                new Book(4, "To Kill a Mockingbird", new Author(4, "Harper", "Lee"), 281, true),
+                new Book(5, "The Great Gatsby", new Author(5, "F. Scott", "Fitzgerald"), 180, true),
+                new Book(6, "Moby Dick", new Author(6, "Herman", "Melville"), 585, false),
+                new Book(7, "War and Peace", new Author(7, "Leo", "Tolstoy"), 1225, true),
+                new Book(8, "Crime and Punishment", new Author(8, "Fyodor", "Dostoevsky"), 671, true),
+                new Book(9, "The Hobbit", new Author(9, "J.R.R.", "Tolkien"), 310, false),
+                new Book(10, "Pride and Prejudice", new Author(10, "Jane", "Austen"), 279, true));
+    };
 
     public void startGame() {
         while (gameOption != 5) {
@@ -31,6 +45,8 @@ public class Game {
             switch (gameOption) {
                 case 1:
                     System.out.println("Case 1");
+                    books.forEach(b -> System.out.println(b));
+                    System.out.println();
 
                     break;
                 case 2:
