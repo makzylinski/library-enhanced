@@ -45,9 +45,11 @@ public class Game {
             switch (gameOption) {
                 case 1:
                     System.out.println("Case 1");
-                    books.forEach(System.out::println);
-                    System.out.println();
+                    books.forEach(b -> {
+                        System.out.print(b.getAuthor().getName() + " " + b.getAuthor().getLastName());
+                        System.out.println(" - " + b.getTitle());
 
+                    });
                     break;
                 case 2:
                     System.out.println("Case 2");
